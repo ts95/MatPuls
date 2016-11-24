@@ -1,0 +1,12 @@
+
+/* Class = "UINavigationItem"; title = "Ny kunde"; ObjectID = "0Ef-0f-Zel"; */
+"0Ef-0f-Zel.title" = "Ny kunde";
+
+/* Class = "UINavigationItem"; title = "Kunder"; ObjectID = "2rD-pi-yai"; */
+"2rD-pi-yai.title" = "Kunder";
+
+/* Class = "UILabel"; text = "Ola Nordmann"; ObjectID = "ZQa-UA-M8u"; */
+"ZQa-UA-M8u.text" = "Ola Nordmann";
+
+/* Class = "UINavigationController"; title = "MatPuls"; ObjectID = "lsV-wG-1wJ"; */
+"lsV-wG-1wJ.title" = "MatPuls";
