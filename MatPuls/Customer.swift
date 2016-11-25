@@ -12,5 +12,5 @@ import RealmSwift
 class Customer: Object {
     
     dynamic var name = ""
-    let reports = [Report]()
+    let reports = List<Report>()
 }

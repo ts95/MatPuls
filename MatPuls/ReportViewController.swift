@@ -16,6 +16,8 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     let realm = try! Realm()
     
+    var notificationToken: NotificationToken!
+    
     var customer: Customer!
     
     override func viewDidLoad() {
@@ -24,6 +26,14 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         reportTableView.delegate = self
         
         customerNameLabel.text = "Rapporter for \(customer.name)"
+        
+        notificationToken = customer.reports.addNotificationBlock { changes in
+            tableViewRealmChangeHandler(changes: changes, tableView: self.reportTableView)
+        }
+    }
+    
+    deinit {
+        notificationToken.stop()
     }
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -12,6 +12,6 @@ import RealmSwift
 class Report: Object {
     
     dynamic var date = NSDate()
-    let coolers = [Cooler]()
+    let coolers = List<Cooler>()
 
 }

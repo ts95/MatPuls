@@ -9,9 +9,9 @@
 import UIKit
 import RealmSwift
 
-func tableViewRealmChangeHandler<T>(changes: RealmCollectionChange<Results<T>>, tableView: UITableView?) {
+func tableViewRealmChangeHandler<T>(changes: RealmCollectionChange<T>, tableView: UITableView?) {
     guard let tableView = tableView else { return }
-
+    
     switch changes {
     case .initial:
         // Results are now populated and can be accessed without blocking the UI

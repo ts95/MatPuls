@@ -20,7 +20,7 @@ class CustomerTableViewController: UITableViewController {
         super.viewDidLoad()
         
         customers = realm.objects(Customer.self).sorted(byProperty: "name")
-        
+
         notificationToken = customers.addNotificationBlock { changes in
             tableViewRealmChangeHandler(changes: changes, tableView: self.tableView)
         }
