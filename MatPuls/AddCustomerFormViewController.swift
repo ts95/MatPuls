@@ -30,10 +30,6 @@ class AddCustomerFormViewController: FormViewController {
             }
     }
     
-    @IBAction func close() {
-        dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func done() {
         let nameRow = form.rowBy(tag: "name") as! TextRow
         
@@ -48,6 +44,10 @@ class AddCustomerFormViewController: FormViewController {
             realm.add(customer)
         }
         
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func close() {
         dismiss(animated: true, completion: nil)
     }
 }

@@ -19,6 +19,10 @@ class CustomerTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // this code deletes the database
+        /*let d = Realm.Configuration.defaultConfiguration.fileURL
+        try! FileManager.default.removeItem(atPath: d!.path)*/
+        
         customers = realm.objects(Customer.self).sorted(byProperty: "name")
 
         notificationToken = customers.addNotificationBlock { changes in
@@ -65,6 +69,8 @@ class CustomerTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier != nil else { return }
+        
         switch segue.identifier! {
         case "reportSegue":
             let dest = segue.destination as! ReportViewController

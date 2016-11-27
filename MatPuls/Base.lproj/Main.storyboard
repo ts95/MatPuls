@@ -49,7 +49,7 @@
                     <navigationItem key="navigationItem" title="Kunder" id="2rD-pi-yai">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JjO-ZS-42u">
                             <connections>
-                                <segue destination="ud5-Vl-miA" kind="presentation" id="qhZ-dw-XGx"/>
+                                <segue destination="ud5-Vl-miA" kind="presentation" id="0MZ-TN-jox"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -84,15 +84,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2K-NR-gCx">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="S2K-NR-gCx" firstAttribute="centerY" secondItem="IKa-0R-01f" secondAttribute="centerY" id="BBv-Mu-2K9"/>
-                                                <constraint firstItem="S2K-NR-gCx" firstAttribute="leading" secondItem="IKa-0R-01f" secondAttribute="leadingMargin" id="HgP-sb-0zW"/>
                                                 <constraint firstItem="S2K-NR-gCx" firstAttribute="trailing" secondItem="IKa-0R-01f" secondAttribute="trailingMargin" id="Zmg-i1-Hnv"/>
+                                                <constraint firstItem="S2K-NR-gCx" firstAttribute="leading" secondItem="IKa-0R-01f" secondAttribute="leadingMargin" constant="20" id="fKw-P3-9MF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -115,18 +115,23 @@
                             <constraint firstItem="CRx-wB-EZx" firstAttribute="trailing" secondItem="cxO-7d-g5W" secondAttribute="trailing" constant="-20" id="81r-FE-sWf"/>
                             <constraint firstItem="CRx-wB-EZx" firstAttribute="leading" secondItem="cxO-7d-g5W" secondAttribute="leading" constant="20" id="Jye-e5-oXo"/>
                             <constraint firstItem="CRx-wB-EZx" firstAttribute="top" secondItem="rGN-QI-mhy" secondAttribute="bottom" constant="10" id="Mop-WV-3i1"/>
-                            <constraint firstItem="cxO-7d-g5W" firstAttribute="top" secondItem="rGN-QI-mhy" secondAttribute="bottom" constant="49" id="Yny-fd-EFQ"/>
+                            <constraint firstItem="cxO-7d-g5W" firstAttribute="top" secondItem="rGN-QI-mhy" secondAttribute="bottom" constant="55" id="Yny-fd-EFQ"/>
                             <constraint firstItem="CRx-wB-EZx" firstAttribute="leading" secondItem="LuY-8Q-03D" secondAttribute="leading" constant="20" id="ccv-DI-A5y"/>
                             <constraint firstAttribute="trailing" secondItem="CRx-wB-EZx" secondAttribute="trailing" constant="20" id="eyg-RE-tE5"/>
                             <constraint firstItem="cxO-7d-g5W" firstAttribute="bottom" secondItem="wsC-En-dIn" secondAttribute="top" id="sYy-gQ-Zve"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rapporter" id="xID-zK-WIs">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sqN-eX-rAt"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sqN-eX-rAt">
+                            <connections>
+                                <action selector="addReport" destination="Ly7-vt-c2K" id="ejL-4e-cWA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="customerNameLabel" destination="CRx-wB-EZx" id="gRa-Hx-MFX"/>
                         <outlet property="reportTableView" destination="cxO-7d-g5W" id="o8K-Pc-cYH"/>
+                        <segue destination="JxK-Dg-PdK" kind="presentation" identifier="addReportSegue" id="B5t-7M-KZw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wya-Es-fLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,7 +166,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bl-QN-8W3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="758"/>
+            <point key="canvasLocation" x="1108" y="1545"/>
+        </scene>
+        <!--Ny rapport-->
+        <scene sceneID="77k-Sl-9bb">
+            <objects>
+                <viewController id="JXM-Ka-O9g" customClass="AddReportFormViewController" customModule="MatPuls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AdA-mq-IeY"/>
+                        <viewControllerLayoutGuide type="bottom" id="VdS-5m-SoA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tx8-Ef-q4x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ny rapport" id="Aml-PZ-yy6">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5hx-HK-ya2">
+                            <connections>
+                                <action selector="cancel" destination="JXM-Ka-O9g" id="XOr-O0-EGM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="6fi-aZ-V2b">
+                            <connections>
+                                <action selector="done" destination="JXM-Ka-O9g" id="msV-fu-dsd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwN-lf-LcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="1545"/>
         </scene>
         <!--MatPuls-->
         <scene sceneID="DTM-AT-8nq">
@@ -198,6 +233,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ya8-GL-WZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="758"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ASl-g6-Lef">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JxK-Dg-PdK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LQA-9i-66X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JXM-Ka-O9g" kind="relationship" relationship="rootViewController" id="x4h-Oy-db8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EmO-2m-Rw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="758"/>
         </scene>
     </scenes>
 </document>

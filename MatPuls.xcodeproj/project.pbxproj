@@ -24,6 +24,9 @@
 		294F61F01DE5F24600D9327D /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61EF1DE5F24600D9327D /* FoodItem.swift */; };
 		294F61F21DE60BA900D9327D /* AddCustomerFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61F11DE60BA900D9327D /* AddCustomerFormViewController.swift */; };
 		294F61F41DE620E900D9327D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61F31DE620E900D9327D /* Helper.swift */; };
+		294F61FA1DE839B200D9327D /* AddReportFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61F91DE839B200D9327D /* AddReportFormViewController.swift */; };
+		294F61FC1DEA613C00D9327D /* CoolerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61FB1DEA613C00D9327D /* CoolerTableViewController.swift */; };
+		294F61FE1DEA626A00D9327D /* CoolerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61FD1DEA626A00D9327D /* CoolerCell.swift */; };
 		D6215E2BC7DC615E07FF90CC /* Pods_MatPuls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE432F41B8801F1C4C0D966F /* Pods_MatPuls.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,9 @@
 		294F61F31DE620E900D9327D /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		294F61F51DE628B400D9327D /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Main.strings; sourceTree = "<group>"; };
 		294F61F61DE628B400D9327D /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		294F61F91DE839B200D9327D /* AddReportFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReportFormViewController.swift; sourceTree = "<group>"; };
+		294F61FB1DEA613C00D9327D /* CoolerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolerTableViewController.swift; sourceTree = "<group>"; };
+		294F61FD1DEA626A00D9327D /* CoolerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolerCell.swift; sourceTree = "<group>"; };
 		97CC45CC9C11D69A4DC3336F /* Pods-MatPuls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatPuls.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatPuls/Pods-MatPuls.debug.xcconfig"; sourceTree = "<group>"; };
 		DE432F41B8801F1C4C0D966F /* Pods_MatPuls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatPuls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,7 +134,10 @@
 			children = (
 				29239B751DE52AF900825F40 /* AppDelegate.swift */,
 				294F61EF1DE5F24600D9327D /* FoodItem.swift */,
+				294F61FB1DEA613C00D9327D /* CoolerTableViewController.swift */,
+				294F61FD1DEA626A00D9327D /* CoolerCell.swift */,
 				294F61ED1DE5F1FC00D9327D /* Cooler.swift */,
+				294F61F91DE839B200D9327D /* AddReportFormViewController.swift */,
 				29239B771DE52AF900825F40 /* ReportViewController.swift */,
 				29239BA81DE5E4E000825F40 /* ReportCell.swift */,
 				29239BA61DE5E43100825F40 /* Report.swift */,
@@ -371,11 +380,14 @@
 				294F61F01DE5F24600D9327D /* FoodItem.swift in Sources */,
 				294F61F41DE620E900D9327D /* Helper.swift in Sources */,
 				29239B781DE52AF900825F40 /* ReportViewController.swift in Sources */,
+				294F61FC1DEA613C00D9327D /* CoolerTableViewController.swift in Sources */,
 				294F61EE1DE5F1FC00D9327D /* Cooler.swift in Sources */,
 				29239B761DE52AF900825F40 /* AppDelegate.swift in Sources */,
 				29239B7E1DE52AF900825F40 /* MatPuls.xcdatamodeld in Sources */,
 				29239BAB1DE5E70200825F40 /* Customer.swift in Sources */,
 				29239BAD1DE5E71800825F40 /* CustomerCell.swift in Sources */,
+				294F61FE1DEA626A00D9327D /* CoolerCell.swift in Sources */,
+				294F61FA1DE839B200D9327D /* AddReportFormViewController.swift in Sources */,
 				294F61F21DE60BA900D9327D /* AddCustomerFormViewController.swift in Sources */,
 				29239BA71DE5E43100825F40 /* Report.swift in Sources */,
 				29239BA91DE5E4E000825F40 /* ReportCell.swift in Sources */,
