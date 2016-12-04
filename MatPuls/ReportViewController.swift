@@ -72,6 +72,12 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let report = customer.reports[indexPath.row]
+        
+        performSegue(withIdentifier: "coolerSegue", sender: report)
+    }
+    
     @IBAction func addReport() {
         performSegue(withIdentifier: "addReportSegue", sender: nil)
     }
@@ -80,6 +86,12 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         guard segue.identifier != nil else { return }
         
         switch segue.identifier! {
+        case "coolerSegue":
+            let dest = segue.destination as! CoolerTableViewController
+            dest.customer = customer
+            dest.report = sender as! Report
+            break
+            
         case "addReportSegue":
             let nav = segue.destination as! UINavigationController
             let dest = nav.topViewController as! AddReportFormViewController
@@ -89,6 +101,5 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         default:
             break
         }
-        
     }
 }

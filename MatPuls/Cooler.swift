@@ -12,6 +12,6 @@ class Cooler: Object {
     
     dynamic var name = ""
     dynamic var tempRange = ""
-    let foodItems = List<FoodItem>()
-    
+    let foodItems = List<Item>()
+
 }

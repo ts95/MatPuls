@@ -18,11 +18,7 @@ class CustomerTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // this code deletes the database
-        /*let d = Realm.Configuration.defaultConfiguration.fileURL
-        try! FileManager.default.removeItem(atPath: d!.path)*/
-        
+                
         customers = realm.objects(Customer.self).sorted(byProperty: "name")
 
         notificationToken = customers.addNotificationBlock { changes in

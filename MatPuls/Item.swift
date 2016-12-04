@@ -1,5 +1,5 @@
 //
-//  FoodItem.swift
+//  Item.swift
 //  MatPuls
 //
 //  Created by Toni Sučić on 23.11.2016.
@@ -8,10 +8,10 @@
 
 import RealmSwift
 
-class FoodItem: Object {
+class Item: Object {
     
-    dynamic var name = ""
-    dynamic var place = ""
+    dynamic var unit = ""
+    dynamic var placeMeasured = ""
     dynamic var temp = ""
-    
+
 }
