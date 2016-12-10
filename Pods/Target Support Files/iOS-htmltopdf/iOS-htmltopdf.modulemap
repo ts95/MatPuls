@@ -1,0 +1,6 @@
+framework module iOS_htmltopdf {
+  umbrella header "iOS-htmltopdf-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ZD-ba-dFZ" id="yRf-5K-LOr">
-                                    <frame key="frameInset" width="375" height="66"/>
+                                    <frame key="frameInset" width="375" height="66.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ola Nordmann" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQa-UA-M8u">
@@ -61,6 +61,46 @@
             </objects>
             <point key="canvasLocation" x="1108" y="-81.409295352323838"/>
         </scene>
+        <!--PDF-->
+        <scene sceneID="2hv-0x-dnS">
+            <objects>
+                <viewController id="JBc-JY-7du" customClass="PDFViewController" customModule="MatPuls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GVP-0r-T1i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cja-Tv-MZl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q4O-2K-yzr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEH-kh-2Mt">
+                                <frame key="frameInset" minY="64" width="375" height="595"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PDF" id="AvM-fS-8CM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="b1i-rq-eMM">
+                            <connections>
+                                <action selector="close" destination="JBc-JY-7du" id="WTT-iq-B6t"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="V4L-jW-vpb">
+                            <connections>
+                                <action selector="compose" destination="JBc-JY-7du" id="cvi-Ua-76r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="bEH-kh-2Mt" id="ADr-yn-eO3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgY-gv-Hkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3670" y="-824"/>
+        </scene>
         <!--Rapporter-->
         <scene sceneID="sAm-iy-R2N">
             <objects>
@@ -80,7 +120,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MEt-I3-yrc" id="IKa-0R-01f">
-                                            <frame key="frameInset" width="375" height="55"/>
+                                            <frame key="frameInset" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2K-NR-gCx">
@@ -133,6 +173,7 @@
                         <outlet property="reportTableView" destination="cxO-7d-g5W" id="o8K-Pc-cYH"/>
                         <segue destination="JxK-Dg-PdK" kind="presentation" identifier="addReportSegue" id="B5t-7M-KZw"/>
                         <segue destination="NdC-Lg-aR9" kind="show" identifier="coolerSegue" id="kDN-iP-6M7"/>
+                        <segue destination="yjF-XW-zBY" kind="presentation" identifier="pdfSegue" id="kVN-J6-qXc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wya-Es-fLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,7 +193,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iPg-x0-lek" id="4rf-KD-GBc">
-                                    <frame key="frameInset" width="375" height="65"/>
+                                    <frame key="frameInset" width="375" height="65.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVk-tF-zUc">
@@ -219,7 +260,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1LF-38-5ZT" id="Wns-gS-IMl">
-                                    <frame key="frameInset" width="375" height="105"/>
+                                    <frame key="frameInset" width="375" height="105.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vai-Dm-a5C">
@@ -493,6 +534,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dns-UI-C5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3670" y="758"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oyN-uN-KWx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yjF-XW-zBY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BO3-dR-d5P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JBc-JY-7du" kind="relationship" relationship="rootViewController" id="Pbz-VP-Rzr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTd-P5-adS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2783" y="-824"/>
         </scene>
     </scenes>
 </document>

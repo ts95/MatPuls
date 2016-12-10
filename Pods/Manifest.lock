@@ -1,5 +1,7 @@
 PODS:
   - Eureka (2.0.0-beta.1)
+  - GRMustache.swift (2.0.0)
+  - iOS-htmltopdf (1.0.3)
   - Realm (2.1.0):
     - Realm/Headers (= 2.1.0)
   - Realm/Headers (2.1.0)
@@ -8,13 +10,17 @@ PODS:
 
 DEPENDENCIES:
   - Eureka (~> 2.0.0-beta.1)
+  - GRMustache.swift
+  - iOS-htmltopdf
   - RealmSwift
 
 SPEC CHECKSUMS:
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
+  GRMustache.swift: 8a547c12bea16052071b2b540af83d770075f0eb
+  iOS-htmltopdf: 1bd88a781cb4b20e4b8f921bd7374447a1876faf
   Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
   RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
 
-PODFILE CHECKSUM: 07b0ca94dcfefe5e685b23f695c09dda82db0b83
+PODFILE CHECKSUM: 578615530e115816eaf3cda0748d7f3e1660d631
 
 COCOAPODS: 1.2.0.beta.1

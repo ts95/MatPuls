@@ -26,7 +26,7 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         reportTableView.delegate = self
         reportTableView.dataSource = self
         
-        customerNameLabel.text = "Rapporter for \(customer.name)"
+        customerNameLabel.text = "Kunde: \(customer.name)"
         
         notificationToken = customer.reports.addNotificationBlock { changes in
             tableViewRealmChangeHandler(changes: changes, tableView: self.reportTableView)
@@ -48,7 +48,7 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let report = customer.reports[indexPath.row]
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy, MMM d"
+        formatter.dateStyle = .long
         
         cell.dateLabel.text = formatter.string(from: report.date as Date)
         
@@ -73,7 +73,15 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let report = customer.reports[indexPath.row]
         
-        performSegue(withIdentifier: "coolerSegue", sender: report)
+        let alert = UIAlertController(title: "Rapport", message: "Generere PDF-fil eller redigere rapporten?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "PDF", style: .default) { alertAction in
+            self.performSegue(withIdentifier: "pdfSegue", sender: report)
+        })
+        alert.addAction(UIAlertAction(title: "Redigere", style: .default) { alertAction in
+            self.performSegue(withIdentifier: "coolerSegue", sender: report)
+        })
+        
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func addReport() {
@@ -94,6 +102,13 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let nav = segue.destination as! UINavigationController
             let dest = nav.topViewController as! AddReportFormViewController
             dest.customer = customer
+            break
+            
+        case "pdfSegue":
+            let nav = segue.destination as! UINavigationController
+            let dest = nav.topViewController as! PDFViewController
+            dest.customer = customer
+            dest.report = sender as! Report
             break
             
         default:

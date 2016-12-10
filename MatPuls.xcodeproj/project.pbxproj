@@ -28,9 +28,12 @@
 		294F61FC1DEA613C00D9327D /* CoolerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61FB1DEA613C00D9327D /* CoolerTableViewController.swift */; };
 		294F61FE1DEA626A00D9327D /* CoolerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61FD1DEA626A00D9327D /* CoolerCell.swift */; };
 		294F62001DEB08DA00D9327D /* AddCoolerFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61FF1DEB08DA00D9327D /* AddCoolerFormViewController.swift */; };
+		2954966D1DFC4D2400DBBF5D /* ReportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2954966C1DFC4D2400DBBF5D /* ReportGenerator.swift */; };
 		29604F6F1DF393270052FD68 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29604F6E1DF393270052FD68 /* ItemTableViewController.swift */; };
 		29604F711DF3936B0052FD68 /* AddItemFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29604F701DF3936B0052FD68 /* AddItemFormViewController.swift */; };
 		29604F761DF437B40052FD68 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29604F751DF437B40052FD68 /* ItemCell.swift */; };
+		29A913CB1DFC67760034C230 /* report.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 29A913CA1DFC67760034C230 /* report.mustache */; };
+		29CBDCBF1DFC553C003B7474 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CBDCBE1DFC553C003B7474 /* PDFViewController.swift */; };
 		D6215E2BC7DC615E07FF90CC /* Pods_MatPuls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE432F41B8801F1C4C0D966F /* Pods_MatPuls.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,9 +85,12 @@
 		294F61FB1DEA613C00D9327D /* CoolerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolerTableViewController.swift; sourceTree = "<group>"; };
 		294F61FD1DEA626A00D9327D /* CoolerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolerCell.swift; sourceTree = "<group>"; };
 		294F61FF1DEB08DA00D9327D /* AddCoolerFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCoolerFormViewController.swift; sourceTree = "<group>"; };
+		2954966C1DFC4D2400DBBF5D /* ReportGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportGenerator.swift; sourceTree = "<group>"; };
 		29604F6E1DF393270052FD68 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		29604F701DF3936B0052FD68 /* AddItemFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemFormViewController.swift; sourceTree = "<group>"; };
 		29604F751DF437B40052FD68 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		29A913CA1DFC67760034C230 /* report.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = report.mustache; path = ../../Desktop/report.mustache; sourceTree = "<group>"; };
+		29CBDCBE1DFC553C003B7474 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		97CC45CC9C11D69A4DC3336F /* Pods-MatPuls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatPuls.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatPuls/Pods-MatPuls.debug.xcconfig"; sourceTree = "<group>"; };
 		DE432F41B8801F1C4C0D966F /* Pods_MatPuls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatPuls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,10 +150,12 @@
 				29604F731DF393930052FD68 /* models */,
 				29604F721DF393880052FD68 /* cells */,
 				29239B751DE52AF900825F40 /* AppDelegate.swift */,
+				2954966C1DFC4D2400DBBF5D /* ReportGenerator.swift */,
 				294F61F31DE620E900D9327D /* Helper.swift */,
 				29239B791DE52AF900825F40 /* Main.storyboard */,
 				29239B7F1DE52AF900825F40 /* Assets.xcassets */,
 				29239B811DE52AF900825F40 /* LaunchScreen.storyboard */,
+				29A913CA1DFC67760034C230 /* report.mustache */,
 				29239B841DE52AF900825F40 /* Info.plist */,
 				29239B7C1DE52AF900825F40 /* MatPuls.xcdatamodeld */,
 			);
@@ -205,6 +213,7 @@
 				29239B771DE52AF900825F40 /* ReportViewController.swift */,
 				294F61F11DE60BA900D9327D /* AddCustomerFormViewController.swift */,
 				29239BAE1DE5E72900825F40 /* CustomerTableViewController.swift */,
+				29CBDCBE1DFC553C003B7474 /* PDFViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -341,6 +350,7 @@
 				29239B831DE52AF900825F40 /* LaunchScreen.storyboard in Resources */,
 				29239B801DE52AF900825F40 /* Assets.xcassets in Resources */,
 				29239B7B1DE52AF900825F40 /* Main.storyboard in Resources */,
+				29A913CB1DFC67760034C230 /* report.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +426,7 @@
 				29604F711DF3936B0052FD68 /* AddItemFormViewController.swift in Sources */,
 				294F61F01DE5F24600D9327D /* Item.swift in Sources */,
 				294F61F41DE620E900D9327D /* Helper.swift in Sources */,
+				2954966D1DFC4D2400DBBF5D /* ReportGenerator.swift in Sources */,
 				29239B781DE52AF900825F40 /* ReportViewController.swift in Sources */,
 				29604F761DF437B40052FD68 /* ItemCell.swift in Sources */,
 				294F61FC1DEA613C00D9327D /* CoolerTableViewController.swift in Sources */,
@@ -424,6 +435,7 @@
 				29604F6F1DF393270052FD68 /* ItemTableViewController.swift in Sources */,
 				29239B761DE52AF900825F40 /* AppDelegate.swift in Sources */,
 				29239B7E1DE52AF900825F40 /* MatPuls.xcdatamodeld in Sources */,
+				29CBDCBF1DFC553C003B7474 /* PDFViewController.swift in Sources */,
 				29239BAB1DE5E70200825F40 /* Customer.swift in Sources */,
 				29239BAD1DE5E71800825F40 /* CustomerCell.swift in Sources */,
 				294F61FE1DEA626A00D9327D /* CoolerCell.swift in Sources */,

@@ -7,6 +7,8 @@ target 'MatPuls' do
 
   pod 'RealmSwift'
   pod 'Eureka', '~> 2.0.0-beta.1'
+  pod 'GRMustache.swift'
+  pod 'iOS-htmltopdf'
 
 end
 
