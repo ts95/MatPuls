@@ -11,7 +11,8 @@ import RealmSwift
 class Cooler: Object {
     
     dynamic var name = ""
-    dynamic var tempRange = ""
-    let foodItems = List<Item>()
+    dynamic var upperTemp = 0.0
+    dynamic var lowerTemp = 0.0
+    let items = List<Item>()
 
 }

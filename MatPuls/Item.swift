@@ -12,6 +12,6 @@ class Item: Object {
     
     dynamic var unit = ""
     dynamic var placeMeasured = ""
-    dynamic var temp = ""
+    dynamic var temp = 0.0
 
 }

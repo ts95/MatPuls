@@ -30,20 +30,44 @@ class AddCoolerFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
-        
-        // TODO: Create TempRangeRow and TempRow rows
+            
+            <<< DecimalRow() { row in
+                var rules = RuleSet<Double>()
+                rules.add(rule: RuleRequired())
+                
+                row.tag = "lowerTemp"
+                row.title = "Min temperatur"
+                row.placeholder = "°C"
+                row.add(ruleSet: rules)
+                row.validationOptions = .validatesOnChange
+            }
+            <<< DecimalRow() { row in
+                var rules = RuleSet<Double>()
+                rules.add(rule: RuleRequired())
+
+                row.tag = "upperTemp"
+                row.title = "Maks temperatur"
+                row.placeholder = "°C"
+                row.add(ruleSet: rules)
+                row.validationOptions = .validatesOnChange
+            }
     }
     
     @IBAction func done() {
         let nameRow = form.rowBy(tag: "name") as! TextRow
+        let lowerTempRow = form.rowBy(tag: "lowerTemp") as! DecimalRow
+        let upperTempRow = form.rowBy(tag: "upperTemp") as! DecimalRow
         
         guard nameRow.validationErrors.count == 0 else { return }
+        guard lowerTempRow.validationErrors.count == 0 else { return }
+        guard upperTempRow.validationErrors.count == 0 else { return }
         
         let realm = try! Realm()
         
         let cooler = Cooler()
         cooler.name = nameRow.value!
-        cooler.tempRange = "2°C - 4°C"
+        cooler.lowerTemp = lowerTempRow.value!
+        cooler.upperTemp = upperTempRow.value!
         
         try! realm.write {
             report.coolers.append(cooler)

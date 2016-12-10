@@ -11,6 +11,8 @@ import RealmSwift
 
 class CoolerTableViewController: UITableViewController {
     
+    let realm = try! Realm()
+    
     var notificationToken: NotificationToken!
     
     var customer: Customer!
@@ -35,9 +37,30 @@ class CoolerTableViewController: UITableViewController {
         let cooler = report.coolers[indexPath.row]
         
         cell.name.text = cooler.name
-        cell.tempRange.text = cooler.tempRange
+        cell.tempRange.text = String(format: "%.1f°C - %.1f°C", arguments: [cooler.lowerTemp, cooler.upperTemp])
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = report.coolers[indexPath.row]
+        
+        performSegue(withIdentifier: "itemSegue", sender: item)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let cooler = report.coolers[indexPath.row]
+        
+        switch editingStyle {
+        case .delete:
+            try! realm.write {
+                realm.delete(cooler)
+            }
+            break
+            
+        default:
+            break
+        }
     }
     
     @IBAction func add() {
@@ -48,6 +71,12 @@ class CoolerTableViewController: UITableViewController {
         guard segue.identifier != nil else { return }
         
         switch segue.identifier! {
+        case "itemSegue":
+            let dest = segue.destination as! ItemTableViewController
+            dest.report = report
+            dest.cooler = sender as! Cooler
+            break
+            
         case "addCoolerSegue":
             let nav = segue.destination as! UINavigationController
             let dest = nav.topViewController as! AddCoolerFormViewController

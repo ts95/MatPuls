@@ -28,17 +28,33 @@ class AddCustomerFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
+            <<< EmailRow() { row in
+                var rules = RuleSet<String>()
+                rules.add(rule: RuleMinLength(minLength: 2))
+                rules.add(rule: RuleMaxLength(maxLength: 20))
+                rules.add(rule: RuleEmail())
+                
+                row.tag = "email"
+                row.title = "Epost"
+                row.placeholder = "Angi epost"
+                row.add(ruleSet: rules)
+                row.validationOptions = .validatesOnChange
+            }
+
     }
     
     @IBAction func done() {
         let nameRow = form.rowBy(tag: "name") as! TextRow
+        let emailRow = form.rowBy(tag: "email") as! EmailRow
         
         guard nameRow.validationErrors.count == 0 else { return }
+        guard emailRow.validationErrors.count == 0 else { return }
         
         let realm = try! Realm()
         
         let customer = Customer()
         customer.name = nameRow.value!
+        customer.email = emailRow.value!
         
         try! realm.write {
             realm.add(customer)

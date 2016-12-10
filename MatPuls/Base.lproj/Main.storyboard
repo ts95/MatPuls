@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,20 +11,20 @@
         <scene sceneID="wPX-Zh-RyW">
             <objects>
                 <tableViewController id="E66-b2-I4S" customClass="CustomerTableViewController" customModule="MatPuls" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" id="lgt-dA-8Cu">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" id="lgt-dA-8Cu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customerCell" rowHeight="57" id="2ZD-ba-dFZ" customClass="CustomerCell" customModule="MatPuls" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="57"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customerCell" rowHeight="67" id="2ZD-ba-dFZ" customClass="CustomerCell" customModule="MatPuls" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ZD-ba-dFZ" id="yRf-5K-LOr">
-                                    <frame key="frameInset" width="375" height="56.5"/>
+                                    <frame key="frameInset" width="375" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ola Nordmann" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQa-UA-M8u">
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ola Nordmann" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQa-UA-M8u">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -60,7 +59,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNK-Vf-ZXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1108" y="-81"/>
+            <point key="canvasLocation" x="1108" y="-81.409295352323838"/>
         </scene>
         <!--Rapporter-->
         <scene sceneID="sAm-iy-R2N">
@@ -74,18 +73,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cxO-7d-g5W">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cxO-7d-g5W">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" id="MEt-I3-yrc" customClass="ReportCell" customModule="MatPuls" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="56" id="MEt-I3-yrc" customClass="ReportCell" customModule="MatPuls" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MEt-I3-yrc" id="IKa-0R-01f">
-                                            <frame key="frameInset" width="375" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2K-NR-gCx">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -106,7 +105,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="78T-3X-Svk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -153,29 +152,30 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iPg-x0-lek" id="4rf-KD-GBc">
-                                    <frame key="frameInset" width="375" height="66"/>
+                                    <frame key="frameInset" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVk-tF-zUc">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="250" id="uC9-xZ-K2I"/>
+                                                <constraint firstAttribute="width" constant="180" id="uC9-xZ-K2I"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°C - 4°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHD-3b-xcO">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="YVk-tF-zUc" firstAttribute="baseline" secondItem="gHD-3b-xcO" secondAttribute="baseline" id="3ic-2J-Bup"/>
                                         <constraint firstItem="YVk-tF-zUc" firstAttribute="top" secondItem="4rf-KD-GBc" secondAttribute="topMargin" id="8Y9-qm-Ghn"/>
-                                        <constraint firstItem="gHD-3b-xcO" firstAttribute="leading" secondItem="YVk-tF-zUc" secondAttribute="trailing" constant="8" symbolic="YES" id="FvM-zq-1TU"/>
-                                        <constraint firstItem="YVk-tF-zUc" firstAttribute="bottom" secondItem="4rf-KD-GBc" secondAttribute="bottomMargin" id="JVz-Cr-XYa"/>
-                                        <constraint firstItem="YVk-tF-zUc" firstAttribute="top" secondItem="gHD-3b-xcO" secondAttribute="top" id="Y7Y-nX-1Rc"/>
+                                        <constraint firstItem="YVk-tF-zUc" firstAttribute="bottom" secondItem="4rf-KD-GBc" secondAttribute="bottomMargin" constant="1" id="JVz-Cr-XYa"/>
+                                        <constraint firstItem="gHD-3b-xcO" firstAttribute="leading" secondItem="YVk-tF-zUc" secondAttribute="trailing" constant="8" symbolic="YES" id="P7H-wT-Dhi"/>
+                                        <constraint firstItem="gHD-3b-xcO" firstAttribute="top" secondItem="YVk-tF-zUc" secondAttribute="top" id="V1S-TV-xhv"/>
+                                        <constraint firstItem="gHD-3b-xcO" firstAttribute="centerY" secondItem="4rf-KD-GBc" secondAttribute="centerY" id="ghq-Zn-L96"/>
+                                        <constraint firstItem="gHD-3b-xcO" firstAttribute="trailing" secondItem="4rf-KD-GBc" secondAttribute="trailingMargin" id="mZU-ic-n11"/>
                                         <constraint firstItem="YVk-tF-zUc" firstAttribute="leading" secondItem="4rf-KD-GBc" secondAttribute="leadingMargin" constant="10" id="rCZ-ev-vKY"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -199,60 +199,69 @@
                     </navigationItem>
                     <connections>
                         <segue destination="r2F-Uy-Zhw" kind="presentation" identifier="addCoolerSegue" id="Jil-H0-Tlc"/>
-                        <segue destination="fbP-R6-5ih" kind="show" id="SnE-aR-dSp"/>
+                        <segue destination="fbP-R6-5ih" kind="show" identifier="itemSegue" id="SnE-aR-dSp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0x-bj-Oc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2784.5" y="-81.5"/>
+            <point key="canvasLocation" x="2783.1999999999998" y="-82.3088455772114"/>
         </scene>
-        <!--Matvarer-->
+        <!--Målinger-->
         <scene sceneID="pwy-Mu-sqz">
             <objects>
                 <tableViewController id="fbP-R6-5ih" customClass="ItemTableViewController" customModule="MatPuls" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" id="rpV-yz-BwO">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" id="rpV-yz-BwO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="1LF-38-5ZT">
-                                <rect key="frame" x="0.0" y="92" width="375" height="76"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="106" id="1LF-38-5ZT" customClass="ItemCell" customModule="MatPuls" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1LF-38-5ZT" id="Wns-gS-IMl">
-                                    <frame key="frameInset" width="375" height="75"/>
+                                    <frame key="frameInset" width="375" height="105"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sted målt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgE-7o-Rx6">
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp °C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vai-Dm-a5C">
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vai-Dm-a5C">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="119" id="0t4-d2-miW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enhet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agH-Jk-BMm">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="2kb-PI-ab1"/>
-                                                <constraint firstAttribute="width" constant="261" id="Oen-YB-FUV"/>
+                                                <constraint firstAttribute="height" constant="32" id="G2j-Jc-SkV"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sted målt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgE-7o-Rx6">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="agH-Jk-BMm" firstAttribute="leading" secondItem="Wns-gS-IMl" secondAttribute="leadingMargin" constant="10" id="BcQ-3W-xQo"/>
-                                        <constraint firstItem="agH-Jk-BMm" firstAttribute="trailing" secondItem="WgE-7o-Rx6" secondAttribute="trailing" id="Dc7-MO-K2k"/>
-                                        <constraint firstItem="WgE-7o-Rx6" firstAttribute="top" secondItem="agH-Jk-BMm" secondAttribute="bottom" constant="8" symbolic="YES" id="SPp-5I-fXc"/>
-                                        <constraint firstItem="vai-Dm-a5C" firstAttribute="firstBaseline" secondItem="agH-Jk-BMm" secondAttribute="firstBaseline" id="Tkv-iG-ivw"/>
-                                        <constraint firstItem="vai-Dm-a5C" firstAttribute="leading" secondItem="agH-Jk-BMm" secondAttribute="trailing" constant="5" id="Tqq-Mp-5av"/>
-                                        <constraint firstItem="vai-Dm-a5C" firstAttribute="baseline" secondItem="WgE-7o-Rx6" secondAttribute="baseline" id="V9m-RL-akP"/>
-                                        <constraint firstItem="WgE-7o-Rx6" firstAttribute="leading" secondItem="Wns-gS-IMl" secondAttribute="leadingMargin" constant="10" id="cb4-uS-mkk"/>
-                                        <constraint firstItem="agH-Jk-BMm" firstAttribute="top" secondItem="Wns-gS-IMl" secondAttribute="topMargin" id="kb0-oK-yzj"/>
+                                        <constraint firstItem="WgE-7o-Rx6" firstAttribute="top" secondItem="agH-Jk-BMm" secondAttribute="bottom" constant="6" id="7aA-lH-JmD"/>
+                                        <constraint firstItem="vai-Dm-a5C" firstAttribute="top" secondItem="Wns-gS-IMl" secondAttribute="top" id="BXb-V9-Mbr"/>
+                                        <constraint firstItem="vai-Dm-a5C" firstAttribute="bottom" secondItem="Wns-gS-IMl" secondAttribute="bottomMargin" id="Dxs-6y-vPT"/>
+                                        <constraint firstItem="vai-Dm-a5C" firstAttribute="leading" secondItem="agH-Jk-BMm" secondAttribute="trailing" constant="19" id="EhY-BG-Gzd"/>
+                                        <constraint firstItem="agH-Jk-BMm" firstAttribute="leading" secondItem="WgE-7o-Rx6" secondAttribute="leading" id="Jpk-JF-DaB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WgE-7o-Rx6" secondAttribute="bottom" constant="10" id="Utn-mO-xu1"/>
+                                        <constraint firstItem="agH-Jk-BMm" firstAttribute="top" secondItem="Wns-gS-IMl" secondAttribute="topMargin" constant="10" id="k7u-ZT-hOo"/>
+                                        <constraint firstItem="agH-Jk-BMm" firstAttribute="trailing" secondItem="WgE-7o-Rx6" secondAttribute="trailing" id="nVD-I0-vil"/>
+                                        <constraint firstItem="agH-Jk-BMm" firstAttribute="leading" secondItem="Wns-gS-IMl" secondAttribute="leadingMargin" constant="10" id="q5P-GR-9zZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vai-Dm-a5C" secondAttribute="trailing" constant="6" id="uXR-SH-VHi"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="placeMeasured" destination="WgE-7o-Rx6" id="W2x-wL-NVd"/>
+                                    <outlet property="temp" destination="vai-Dm-a5C" id="uTR-K6-8id"/>
+                                    <outlet property="unit" destination="agH-Jk-BMm" id="11H-hf-ROd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -260,8 +269,12 @@
                             <outlet property="delegate" destination="fbP-R6-5ih" id="Li7-kk-dK1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Matvarer" id="Mwu-G5-Twy">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LAp-Dg-cBs"/>
+                    <navigationItem key="navigationItem" title="Målinger" id="Mwu-G5-Twy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LAp-Dg-cBs">
+                            <connections>
+                                <action selector="add" destination="fbP-R6-5ih" id="WUE-cU-oWY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="tga-Yl-ggL" kind="presentation" identifier="addItemSegue" id="Esv-SN-wHr"/>
@@ -415,10 +428,10 @@
             </objects>
             <point key="canvasLocation" x="2783" y="1545"/>
         </scene>
-        <!--Ny matvare-->
+        <!--Ny måling-->
         <scene sceneID="BtX-Y2-aFp">
             <objects>
-                <viewController id="SA5-Wc-YJr" sceneMemberID="viewController">
+                <viewController id="SA5-Wc-YJr" customClass="AddItemFormViewController" customModule="MatPuls" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="re4-4p-gB2"/>
                         <viewControllerLayoutGuide type="bottom" id="qu9-dK-qxC"/>
@@ -428,9 +441,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ny matvare" id="Ptt-jt-U8K">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="plc-Qz-BUR"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="v7j-9u-ALt"/>
+                    <navigationItem key="navigationItem" title="Ny måling" id="Ptt-jt-U8K">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="plc-Qz-BUR">
+                            <connections>
+                                <action selector="cancel" destination="SA5-Wc-YJr" id="s77-RJ-zcf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="v7j-9u-ALt">
+                            <connections>
+                                <action selector="done" destination="SA5-Wc-YJr" id="pYH-qY-4hO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4co-ho-Jv2" userLabel="First Responder" sceneMemberID="firstResponder"/>

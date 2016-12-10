@@ -31,8 +31,6 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         notificationToken = customer.reports.addNotificationBlock { changes in
             tableViewRealmChangeHandler(changes: changes, tableView: self.reportTableView)
         }
-        
-        print("There are \(customer.reports.count) report(s)")
     }
     
     deinit {

@@ -28,9 +28,9 @@
 		294F61FC1DEA613C00D9327D /* CoolerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61FB1DEA613C00D9327D /* CoolerTableViewController.swift */; };
 		294F61FE1DEA626A00D9327D /* CoolerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61FD1DEA626A00D9327D /* CoolerCell.swift */; };
 		294F62001DEB08DA00D9327D /* AddCoolerFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F61FF1DEB08DA00D9327D /* AddCoolerFormViewController.swift */; };
-		294F62031DEC531F00D9327D /* TempRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F62021DEC531F00D9327D /* TempRow.swift */; };
 		29604F6F1DF393270052FD68 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29604F6E1DF393270052FD68 /* ItemTableViewController.swift */; };
 		29604F711DF3936B0052FD68 /* AddItemFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29604F701DF3936B0052FD68 /* AddItemFormViewController.swift */; };
+		29604F761DF437B40052FD68 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29604F751DF437B40052FD68 /* ItemCell.swift */; };
 		D6215E2BC7DC615E07FF90CC /* Pods_MatPuls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE432F41B8801F1C4C0D966F /* Pods_MatPuls.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,9 +82,9 @@
 		294F61FB1DEA613C00D9327D /* CoolerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolerTableViewController.swift; sourceTree = "<group>"; };
 		294F61FD1DEA626A00D9327D /* CoolerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolerCell.swift; sourceTree = "<group>"; };
 		294F61FF1DEB08DA00D9327D /* AddCoolerFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCoolerFormViewController.swift; sourceTree = "<group>"; };
-		294F62021DEC531F00D9327D /* TempRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempRow.swift; sourceTree = "<group>"; };
 		29604F6E1DF393270052FD68 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		29604F701DF3936B0052FD68 /* AddItemFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemFormViewController.swift; sourceTree = "<group>"; };
+		29604F751DF437B40052FD68 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		97CC45CC9C11D69A4DC3336F /* Pods-MatPuls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatPuls.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatPuls/Pods-MatPuls.debug.xcconfig"; sourceTree = "<group>"; };
 		DE432F41B8801F1C4C0D966F /* Pods_MatPuls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatPuls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,7 +143,6 @@
 				29604F741DF3A1A30052FD68 /* controllers */,
 				29604F731DF393930052FD68 /* models */,
 				29604F721DF393880052FD68 /* cells */,
-				294F62011DEC530F00D9327D /* rows */,
 				29239B751DE52AF900825F40 /* AppDelegate.swift */,
 				294F61F31DE620E900D9327D /* Helper.swift */,
 				29239B791DE52AF900825F40 /* Main.storyboard */,
@@ -173,17 +172,10 @@
 			path = MatPulsUITests;
 			sourceTree = "<group>";
 		};
-		294F62011DEC530F00D9327D /* rows */ = {
-			isa = PBXGroup;
-			children = (
-				294F62021DEC531F00D9327D /* TempRow.swift */,
-			);
-			name = rows;
-			sourceTree = "<group>";
-		};
 		29604F721DF393880052FD68 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				29604F751DF437B40052FD68 /* ItemCell.swift */,
 				294F61FD1DEA626A00D9327D /* CoolerCell.swift */,
 				29239BA81DE5E4E000825F40 /* ReportCell.swift */,
 				29239BAC1DE5E71800825F40 /* CustomerCell.swift */,
@@ -425,6 +417,7 @@
 				294F61F01DE5F24600D9327D /* Item.swift in Sources */,
 				294F61F41DE620E900D9327D /* Helper.swift in Sources */,
 				29239B781DE52AF900825F40 /* ReportViewController.swift in Sources */,
+				29604F761DF437B40052FD68 /* ItemCell.swift in Sources */,
 				294F61FC1DEA613C00D9327D /* CoolerTableViewController.swift in Sources */,
 				294F62001DEB08DA00D9327D /* AddCoolerFormViewController.swift in Sources */,
 				294F61EE1DE5F1FC00D9327D /* Cooler.swift in Sources */,
@@ -434,7 +427,6 @@
 				29239BAB1DE5E70200825F40 /* Customer.swift in Sources */,
 				29239BAD1DE5E71800825F40 /* CustomerCell.swift in Sources */,
 				294F61FE1DEA626A00D9327D /* CoolerCell.swift in Sources */,
-				294F62031DEC531F00D9327D /* TempRow.swift in Sources */,
 				294F61FA1DE839B200D9327D /* AddReportFormViewController.swift in Sources */,
 				294F61F21DE60BA900D9327D /* AddCustomerFormViewController.swift in Sources */,
 				29239BA71DE5E43100825F40 /* Report.swift in Sources */,
