@@ -37,7 +37,7 @@ class CoolerTableViewController: UITableViewController {
         let cooler = report.coolers[indexPath.row]
         
         cell.name.text = cooler.name
-        cell.tempRange.text = String(format: "%.1f - %.1f°C", arguments: [cooler.lowerTemp, cooler.upperTemp])
+        cell.tempRange.text = cooler.tempRange
         
         return cell
     }

@@ -43,7 +43,7 @@ class ItemTableViewController: UITableViewController {
         
         cell.unit.text = item.unit
         cell.placeMeasured.text = item.placeMeasured
-        cell.temp.text = String(format: "%.1f°C", arguments: [item.temp])
+        cell.temp.text = item.prettyTemp(for: cooler)
         
         return cell
     }

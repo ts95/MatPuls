@@ -18,15 +18,6 @@ class PDFViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*let pdfData = ReportGenerator.generatePDF(customer: customer!, report: report!)
-        
-        /webView.load(
-            pdfData as Data,
-            mimeType: "application/pdf",
-            textEncodingName: "utf-8",
-            baseURL: URL(string: "/pdf")!
-        )*/
-        
         ReportGenerator.generatePDF(customer: customer, report: report, completion: { htmlToPdf in
             self.webView.load(
                 htmlToPdf!.pdFdata,

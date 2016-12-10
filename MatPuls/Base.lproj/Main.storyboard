@@ -73,13 +73,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEH-kh-2Mt">
-                                <frame key="frameInset" minY="64" width="375" height="595"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEH-kh-2Mt">
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bEH-kh-2Mt" firstAttribute="top" secondItem="GVP-0r-T1i" secondAttribute="bottom" id="Shb-gm-mmW"/>
+                            <constraint firstAttribute="trailing" secondItem="bEH-kh-2Mt" secondAttribute="trailing" id="bb8-1o-eai"/>
+                            <constraint firstItem="bEH-kh-2Mt" firstAttribute="leading" secondItem="Q4O-2K-yzr" secondAttribute="leading" id="rQ1-yH-GuI"/>
+                            <constraint firstItem="Cja-Tv-MZl" firstAttribute="top" secondItem="bEH-kh-2Mt" secondAttribute="bottom" id="zSq-Sa-ZnD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PDF" id="AvM-fS-8CM">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="b1i-rq-eMM">
@@ -99,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgY-gv-Hkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3670" y="-824"/>
+            <point key="canvasLocation" x="3669.5999999999999" y="-824.43778110944538"/>
         </scene>
         <!--Rapporter-->
         <scene sceneID="sAm-iy-R2N">

@@ -13,6 +13,16 @@ class Cooler: Object {
     dynamic var name = ""
     dynamic var upperTemp = 0.0
     dynamic var lowerTemp = 0.0
+    
+    var tempRange: String {
+        get {
+            if upperTemp == lowerTemp {
+                return String(format: "%.1f°C", arguments: [lowerTemp])
+            }
+            
+            return String(format: "%.1f - %.1f°C", arguments: [lowerTemp, upperTemp])
+        }
+    }
+    
     let items = List<Item>()
-
 }

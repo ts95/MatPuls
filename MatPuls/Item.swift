@@ -13,5 +13,46 @@ class Item: Object {
     dynamic var unit = ""
     dynamic var placeMeasured = ""
     dynamic var temp = 0.0
-
+    
+    func prettyTemp(for cooler: Cooler) -> String {
+        let baseString = String(format: "%.1f°C", arguments: [temp])
+        
+        if cooler.lowerTemp < 0 {
+            return freezingCoolerStrategy(baseString: baseString, cooler: cooler)
+        }
+        
+        return regularCoolerStrategy(baseString: baseString, cooler: cooler)
+    }
+    
+    func freezingCoolerStrategy(baseString: String, cooler: Cooler) -> String {
+        if temp > cooler.upperTemp + 4 {
+            return "\(baseString) ☹️"
+        }
+        
+        if temp > cooler.upperTemp {
+            return "\(baseString) 😐"
+        }
+        
+        return baseString
+    }
+    
+    func regularCoolerStrategy(baseString: String, cooler: Cooler) -> String {
+        if temp > 15 {
+            return "\(baseString) 😵"
+        }
+        
+        if temp > cooler.upperTemp + 4 {
+            return "\(baseString) ☹️"
+        }
+        
+        if temp > cooler.upperTemp {
+            return "\(baseString) 😐"
+        }
+        
+        if temp < cooler.lowerTemp {
+            return "\(baseString) 😐"
+        }
+        
+        return baseString
+    }
 }
