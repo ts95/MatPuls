@@ -56,10 +56,10 @@ class AddCoolerFormViewController: FormViewController {
         let nameRow = form.rowBy(tag: "name") as! NameRow
         let lowerTempRow = form.rowBy(tag: "lowerTemp") as! SignedIntRow
         let upperTempRow = form.rowBy(tag: "upperTemp") as! SignedIntRow
+
+        let passes = formErrorAlert(self, form: form)
         
-        guard nameRow.validationErrors.count == 0 else { return }
-        guard lowerTempRow.validationErrors.count == 0 else { return }
-        guard upperTempRow.validationErrors.count == 0 else { return }
+        guard passes else { return }
         guard lowerTempRow.value! <= upperTempRow.value! else { return }
         
         let realm = try! Realm()

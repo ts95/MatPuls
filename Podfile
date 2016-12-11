@@ -11,6 +11,13 @@ target 'MatPuls' do
   pod 'iOS-htmltopdf'
   pod 'PKHUD', '~> 4.0'
 
+  target 'MatPulsTests' do
+      inherit! :search_paths
+  end
+  
+  target 'MatPulsUITests' do
+      inherit! :search_paths
+  end
 end
 
 post_install do |installer|

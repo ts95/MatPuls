@@ -59,9 +59,9 @@ class AddItemFormViewController: FormViewController {
         let placeMeasuredRow = form.rowBy(tag: "placeMeasured") as! NameRow
         let tempRow = form.rowBy(tag: "temp") as! SignedIntRow
         
-        guard unitRow.validationErrors.count == 0 else { return }
-        guard placeMeasuredRow.validationErrors.count == 0 else { return }
-        guard tempRow.validationErrors.count == 0 else { return }
+        let passes = formErrorAlert(self, form: form)
+        
+        guard passes else { return }
         
         let realm = try! Realm()
         

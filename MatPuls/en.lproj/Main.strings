@@ -1,48 +1,48 @@
 
 /* Class = "UINavigationItem"; title = "Ny kunde"; ObjectID = "0Ef-0f-Zel"; */
-"0Ef-0f-Zel.title" = "Ny kunde";
+"0Ef-0f-Zel.title" = "New customer";
 
 /* Class = "UINavigationItem"; title = "Kunder"; ObjectID = "2rD-pi-yai"; */
-"2rD-pi-yai.title" = "Kunder";
+"2rD-pi-yai.title" = "Customers";
 
 /* Class = "UINavigationItem"; title = "Ny rapport"; ObjectID = "Aml-PZ-yy6"; */
-"Aml-PZ-yy6.title" = "Ny rapport";
+"Aml-PZ-yy6.title" = "New report";
 
 /* Class = "UINavigationItem"; title = "PDF"; ObjectID = "AvM-fS-8CM"; */
 "AvM-fS-8CM.title" = "PDF";
 
 /* Class = "UILabel"; text = "Kunde"; ObjectID = "CRx-wB-EZx"; */
-"CRx-wB-EZx.text" = "Kunde";
+"CRx-wB-EZx.text" = "Customer";
 
 /* Class = "UINavigationItem"; title = "Målinger"; ObjectID = "Mwu-G5-Twy"; */
-"Mwu-G5-Twy.title" = "Målinger";
+"Mwu-G5-Twy.title" = "Measurements";
 
 /* Class = "UINavigationItem"; title = "Ny måling"; ObjectID = "Ptt-jt-U8K"; */
-"Ptt-jt-U8K.title" = "Ny måling";
+"Ptt-jt-U8K.title" = "New measurement";
 
 /* Class = "UILabel"; text = "Dato"; ObjectID = "S2K-NR-gCx"; */
-"S2K-NR-gCx.text" = "Dato";
+"S2K-NR-gCx.text" = "Date";
 
 /* Class = "UILabel"; text = "Sted målt"; ObjectID = "WgE-7o-Rx6"; */
-"WgE-7o-Rx6.text" = "Sted målt";
+"WgE-7o-Rx6.text" = "Place measured";
 
 /* Class = "UILabel"; text = "Cooler"; ObjectID = "YVk-tF-zUc"; */
-"YVk-tF-zUc.text" = "Kjøler";
+"YVk-tF-zUc.text" = "Cooler";
 
 /* Class = "UINavigationItem"; title = "Kjølere"; ObjectID = "YX4-Gx-FWj"; */
-"YX4-Gx-FWj.title" = "Kjølere";
+"YX4-Gx-FWj.title" = "Coolers";
 
 /* Class = "UILabel"; text = "Ola Nordmann"; ObjectID = "ZQa-UA-M8u"; */
-"ZQa-UA-M8u.text" = "Ola Nordmann";
+"ZQa-UA-M8u.text" = "John Smith";
 
 /* Class = "UILabel"; text = "Enhet"; ObjectID = "agH-Jk-BMm"; */
-"agH-Jk-BMm.text" = "Enhet";
+"agH-Jk-BMm.text" = "Unit";
 
 /* Class = "UILabel"; text = "1°C - 4°C"; ObjectID = "gHD-3b-xcO"; */
 "gHD-3b-xcO.text" = "1°C - 4°C";
 
 /* Class = "UINavigationItem"; title = "Ny kjøler"; ObjectID = "kfC-2v-ppQ"; */
-"kfC-2v-ppQ.title" = "Ny kjøler";
+"kfC-2v-ppQ.title" = "New cooler";
 
 /* Class = "UINavigationController"; title = "MatPuls"; ObjectID = "lsV-wG-1wJ"; */
 "lsV-wG-1wJ.title" = "MatPuls";
@@ -51,18 +51,17 @@
 "vai-Dm-a5C.text" = "1°C";
 
 /* Class = "UINavigationItem"; title = "Rapporter"; ObjectID = "xID-zK-WIs"; */
-"xID-zK-WIs.title" = "Rapporter";
+"xID-zK-WIs.title" = "Reports";
 
 
-"newCustomerHeader" = "Opprett en ny kunde";
+"newCustomerHeader" = "Create a new customer";
 
-"newCustomerFooter" = "For å kunne opprette en rapport må man opprette en kunde først.";
+"newCustomerFooter" = "In order to create a report you need to create a customer first.";
 
-"name" = "Navn";
+"name" = "Name";
 
-"namePlaceholder" = "Angi navn";
+"namePlaceholder" = "Enter name";
 
-"email" = "Epost";
+"email" = "Email";
 
-"emailPlaceholder" = "Angi epost";
-
+"emailPlaceholder" = "Enter email";

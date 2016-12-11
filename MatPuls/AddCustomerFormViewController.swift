@@ -15,7 +15,7 @@ class AddCustomerFormViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ Section(header: "Opprett en ny kunde", footer: "For å kunne opprette en rapport må man opprette en kunde først.")
+        form +++ Section(header: "newCustomerHeader".localized(with: "Create a new customer"), footer: "newCustomerFooter".localized(with: "In order to create a report you need to create a customer first."))
             <<< NameRow() { row in
                 var rules = RuleSet<String>()
                 rules.add(rule: RuleRequired())
@@ -23,8 +23,8 @@ class AddCustomerFormViewController: FormViewController {
                 rules.add(rule: RuleMaxLength(maxLength: 40))
                 
                 row.tag = "name"
-                row.title = "Navn"
-                row.placeholder = "Angi navn"
+                row.title = "name".localized(with: "Name")
+                row.placeholder = "namePlaceholder".localized(with: "Enter name")
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
@@ -35,19 +35,20 @@ class AddCustomerFormViewController: FormViewController {
                 rules.add(rule: RuleEmail())
                 
                 row.tag = "email"
-                row.title = "Epost"
-                row.placeholder = "Angi epost"
+                row.title = "email".localized(with: "Email")
+                row.placeholder = "emailPlaceholder".localized(with: "Enter email")
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
     }
     
-    @IBAction func done() {
+    @IBAction func done() {        
         let nameRow = form.rowBy(tag: "name") as! NameRow
         let emailRow = form.rowBy(tag: "email") as! EmailRow
+
+        let passes = formErrorAlert(self, form: form)
         
-        guard nameRow.validationErrors.count == 0 else { return }
-        guard emailRow.validationErrors.count == 0 else { return }
+        guard passes else { return }
         
         let realm = try! Realm()
         
