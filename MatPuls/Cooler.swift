@@ -20,7 +20,7 @@ class Cooler: Object {
                 return String(format: "%d°C", arguments: [lowerTemp])
             }
             
-            return String(format: "%d - %d°C", arguments: [lowerTemp, upperTemp])
+            return String(format: "%d — %d°C", arguments: [lowerTemp, upperTemp])
         }
     }
     

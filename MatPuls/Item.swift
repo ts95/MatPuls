@@ -37,8 +37,8 @@ class Item: Object {
     }
     
     func regularCoolerStrategy(baseString: String, cooler: Cooler) -> String {
-        if temp > 15 {
-            return "\(baseString) 😵"
+        if temp > cooler.upperTemp + 14 {
+            return "\(baseString) 🚮"
         }
         
         if temp > cooler.upperTemp + 4 {
