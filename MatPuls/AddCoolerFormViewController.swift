@@ -17,7 +17,7 @@ class AddCoolerFormViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        form +++ Section(header: "newCoolerHeader".localized(with: "New cooler"), footer: "newCoolerFooter".localized(with: "A cooler could be a cooling-room, a cooling-desk, a freezing-desk or a freezing-room, etc."))
+        form +++ Section(header: "newCoolerHeader".localized(comment: "New cooler"), footer: "newCoolerFooter".localized(comment: "A cooler could be a cooling-room, a cooling-desk, a freezing-desk or a freezing-room, etc."))
             <<< NameRow() { row in
                 var rules = RuleSet<String>()
                 rules.add(rule: RuleRequired())
@@ -25,8 +25,8 @@ class AddCoolerFormViewController: FormViewController {
                 rules.add(rule: RuleMaxLength(maxLength: 20))
                 
                 row.tag = "name"
-                row.title = "name".localized(with: "Name")
-                row.placeholder = "coolerNamePlaceholder".localized(with: "Enter cooler name")
+                row.title = "name".localized(comment: "Name")
+                row.placeholder = "coolerNamePlaceholder".localized(comment: "Enter cooler name")
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
@@ -35,7 +35,7 @@ class AddCoolerFormViewController: FormViewController {
                 rules.add(rule: RuleRequired())
                 
                 row.tag = "lowerTemp"
-                row.title = "coolerLowerTemp".localized(with: "Lower temp")
+                row.title = "coolerLowerTemp".localized(comment: "Lower temp")
                 row.placeholder = "°C"
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
@@ -45,7 +45,7 @@ class AddCoolerFormViewController: FormViewController {
                 rules.add(rule: RuleRequired())
 
                 row.tag = "upperTemp"
-                row.title = "coolerUpperTemp".localized(with: "Upper temp")
+                row.title = "coolerUpperTemp".localized(comment: "Upper temp")
                 row.placeholder = "°C"
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange

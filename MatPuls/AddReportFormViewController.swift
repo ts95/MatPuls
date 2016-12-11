@@ -19,10 +19,10 @@ class AddReportFormViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ Section(header: "newReportHeader".localized(with: "Create a new report"), footer: "")
+        form +++ Section(header: "newReportHeader".localized(comment: "Create a new report"), footer: "")
             <<< DateRow() { row in
                 row.tag = "date"
-                row.title = "date".localized(with: "Date")
+                row.title = "date".localized(comment: "Date")
                 row.value = Date()
                 row.validationOptions = .validatesOnChange
             }

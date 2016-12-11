@@ -15,7 +15,7 @@ class AddCustomerFormViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ Section(header: "newCustomerHeader".localized(with: "Create a new customer"), footer: "newCustomerFooter".localized(with: "In order to create a report you need to create a customer first."))
+        form +++ Section(header: "newCustomerHeader".localized(comment: "Create a new customer"), footer: "newCustomerFooter".localized(comment: "In order to create a report you need to create a customer first."))
             <<< NameRow() { row in
                 var rules = RuleSet<String>()
                 rules.add(rule: RuleRequired())
@@ -23,8 +23,8 @@ class AddCustomerFormViewController: FormViewController {
                 rules.add(rule: RuleMaxLength(maxLength: 40))
                 
                 row.tag = "name"
-                row.title = "name".localized(with: "Name")
-                row.placeholder = "namePlaceholder".localized(with: "Enter name")
+                row.title = "name".localized(comment: "Name")
+                row.placeholder = "namePlaceholder".localized(comment: "Enter name")
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
@@ -35,8 +35,8 @@ class AddCustomerFormViewController: FormViewController {
                 rules.add(rule: RuleEmail())
                 
                 row.tag = "email"
-                row.title = "email".localized(with: "Email")
-                row.placeholder = "emailPlaceholder".localized(with: "Enter email")
+                row.title = "email".localized(comment: "Email")
+                row.placeholder = "emailPlaceholder".localized(comment: "Enter email")
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }

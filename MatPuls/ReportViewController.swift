@@ -27,7 +27,7 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         reportTableView.delegate = self
         reportTableView.dataSource = self
         
-        customerNameLabel.text = "\("customer".localized(with: "Customer")): \(customer.name)"
+        customerNameLabel.text = "\("customer".localized(comment: "Customer")): \(customer.name)"
         
         notificationToken = customer.reports.addNotificationBlock { changes in
             tableViewRealmChangeHandler(changes: changes, tableView: self.reportTableView)
@@ -75,20 +75,20 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let report = customer.reports[indexPath.row]
 
         if report.coolers.count > 0 {
-            let alert = UIAlertController(title: "report".localized(with: "Report"), message: "reportActionMessage".localized(with: "Generate a PDF-file or edit the report?"), preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "reportGeneratePDF".localized(with: "Generate PDF"), style: .default) { _ in
+            let alert = UIAlertController(title: "report".localized(comment: "Report"), message: "reportActionMessage".localized(comment: "Generate a PDF-file or edit the report?"), preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "reportGeneratePDF".localized(comment: "Generate PDF"), style: .default) { _ in
                 HUD.show(.progress)
                 
                 self.performSegue(withIdentifier: "pdfSegue", sender: report)
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             })
-            alert.addAction(UIAlertAction(title: "reportEdit".localized(with: "Edit"), style: .default) { _ in
+            alert.addAction(UIAlertAction(title: "reportEdit".localized(comment: "Edit"), style: .default) { _ in
                 self.performSegue(withIdentifier: "coolerSegue", sender: report)
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             })
-            alert.addAction(UIAlertAction(title: "cancel".localized(with: "Cancel"), style: .cancel) { _ in
+            alert.addAction(UIAlertAction(title: "cancel".localized(comment: "Cancel"), style: .cancel) { _ in
                 tableView.deselectRow(at: indexPath, animated: true)
             })
             

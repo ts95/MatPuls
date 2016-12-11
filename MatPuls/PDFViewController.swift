@@ -62,7 +62,7 @@ class PDFViewController: UIViewController, UIWebViewDelegate, MFMailComposeViewC
     }
     
     func showSendMailErrorAlert() {
-        let alert = UIAlertController(title: "mailErrorTitle".localized(with: "The email could not be sent"), message: "mailErrorMessage".localized(with: "Your device couldn't send the email. Check if your email configuration is in order."), preferredStyle: .alert)
+        let alert = UIAlertController(title: "mailErrorTitle".localized(comment: "The email could not be sent"), message: "mailErrorMessage".localized(comment: "Your device couldn't send the email. Check if your email configuration is in order."), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
         present(alert, animated: true, completion: nil)
