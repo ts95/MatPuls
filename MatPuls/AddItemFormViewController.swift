@@ -18,11 +18,11 @@ class AddItemFormViewController: FormViewController {
         super.viewDidLoad()
         
         form +++ Section(header: "Ny måling", footer: "")
-            <<< TextRow() { row in
+            <<< NameRow() { row in
                 var rules = RuleSet<String>()
                 rules.add(rule: RuleRequired())
                 rules.add(rule: RuleMinLength(minLength: 2))
-                rules.add(rule: RuleMaxLength(maxLength: 20))
+                rules.add(rule: RuleMaxLength(maxLength: 30))
                 
                 row.tag = "unit"
                 row.title = "Enhet"
@@ -30,11 +30,11 @@ class AddItemFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
-            <<< TextRow() { row in
+            <<< NameRow() { row in
                 var rules = RuleSet<String>()
                 rules.add(rule: RuleRequired())
                 rules.add(rule: RuleMinLength(minLength: 2))
-                rules.add(rule: RuleMaxLength(maxLength: 20))
+                rules.add(rule: RuleMaxLength(maxLength: 30))
                 
                 row.tag = "placeMeasured"
                 row.title = "Sted målt"
@@ -42,8 +42,8 @@ class AddItemFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
-            <<< DecimalRow() { row in
-                var rules = RuleSet<Double>()
+            <<< SignedIntRow() { row in
+                var rules = RuleSet<Int>()
                 rules.add(rule: RuleRequired())
                 
                 row.tag = "temp"
@@ -55,9 +55,9 @@ class AddItemFormViewController: FormViewController {
     }
     
     @IBAction func done() {
-        let unitRow = form.rowBy(tag: "unit") as! TextRow
-        let placeMeasuredRow = form.rowBy(tag: "placeMeasured") as! TextRow
-        let tempRow = form.rowBy(tag: "temp") as! DecimalRow
+        let unitRow = form.rowBy(tag: "unit") as! NameRow
+        let placeMeasuredRow = form.rowBy(tag: "placeMeasured") as! NameRow
+        let tempRow = form.rowBy(tag: "temp") as! SignedIntRow
         
         guard unitRow.validationErrors.count == 0 else { return }
         guard placeMeasuredRow.validationErrors.count == 0 else { return }

@@ -16,11 +16,11 @@ class AddCustomerFormViewController: FormViewController {
         super.viewDidLoad()
         
         form +++ Section(header: "Opprett en ny kunde", footer: "For å kunne opprette en rapport må man opprette en kunde først.")
-            <<< TextRow() { row in
+            <<< NameRow() { row in
                 var rules = RuleSet<String>()
                 rules.add(rule: RuleRequired())
                 rules.add(rule: RuleMinLength(minLength: 2))
-                rules.add(rule: RuleMaxLength(maxLength: 20))
+                rules.add(rule: RuleMaxLength(maxLength: 40))
                 
                 row.tag = "name"
                 row.title = "Navn"
@@ -31,7 +31,7 @@ class AddCustomerFormViewController: FormViewController {
             <<< EmailRow() { row in
                 var rules = RuleSet<String>()
                 rules.add(rule: RuleMinLength(minLength: 2))
-                rules.add(rule: RuleMaxLength(maxLength: 20))
+                rules.add(rule: RuleMaxLength(maxLength: 40))
                 rules.add(rule: RuleEmail())
                 
                 row.tag = "email"
@@ -40,11 +40,10 @@ class AddCustomerFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
-
     }
     
     @IBAction func done() {
-        let nameRow = form.rowBy(tag: "name") as! TextRow
+        let nameRow = form.rowBy(tag: "name") as! NameRow
         let emailRow = form.rowBy(tag: "email") as! EmailRow
         
         guard nameRow.validationErrors.count == 0 else { return }

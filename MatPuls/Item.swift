@@ -12,10 +12,10 @@ class Item: Object {
     
     dynamic var unit = ""
     dynamic var placeMeasured = ""
-    dynamic var temp = 0.0
+    dynamic var temp = 0
     
     func prettyTemp(for cooler: Cooler) -> String {
-        let baseString = String(format: "%.1f°C", arguments: [temp])
+        let baseString = String(format: "%d°C", arguments: [temp])
         
         if cooler.lowerTemp < 0 {
             return freezingCoolerStrategy(baseString: baseString, cooler: cooler)

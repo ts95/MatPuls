@@ -46,6 +46,8 @@ class CoolerTableViewController: UITableViewController {
         let item = report.coolers[indexPath.row]
         
         performSegue(withIdentifier: "itemSegue", sender: item)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

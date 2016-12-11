@@ -73,15 +73,26 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let report = customer.reports[indexPath.row]
         
-        let alert = UIAlertController(title: "Rapport", message: "Generere PDF-fil eller redigere rapporten?", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "PDF", style: .default) { alertAction in
-            self.performSegue(withIdentifier: "pdfSegue", sender: report)
-        })
-        alert.addAction(UIAlertAction(title: "Redigere", style: .default) { alertAction in
+        if report.coolers.count > 0 {
+            let alert = UIAlertController(title: "Rapport", message: "Generere PDF-fil eller redigere rapporten?", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "PDF", style: .default) { alertAction in
+                self.performSegue(withIdentifier: "pdfSegue", sender: report)
+                
+                tableView.deselectRow(at: indexPath, animated: true)
+            })
+            alert.addAction(UIAlertAction(title: "Redigere", style: .default) { alertAction in
+                self.performSegue(withIdentifier: "coolerSegue", sender: report)
+                
+                tableView.deselectRow(at: indexPath, animated: true)
+            })
+            alert.addAction(UIAlertAction(title: "Avbryt", style: .cancel, handler: nil))
+            
+            present(alert, animated: true, completion: nil)
+        } else {
             self.performSegue(withIdentifier: "coolerSegue", sender: report)
-        })
-        
-        present(alert, animated: true, completion: nil)
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
     
     @IBAction func addReport() {

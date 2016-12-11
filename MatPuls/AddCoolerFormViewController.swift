@@ -18,7 +18,7 @@ class AddCoolerFormViewController: FormViewController {
         super.viewDidLoad()
         
         form +++ Section(header: "Ny kjøler", footer: "En kjøler kan f.eks. være et kjølerom, en kjøledisk, en frysedisk eller et fryserom.")
-            <<< TextRow() { row in
+            <<< NameRow() { row in
                 var rules = RuleSet<String>()
                 rules.add(rule: RuleRequired())
                 rules.add(rule: RuleMinLength(minLength: 2))
@@ -30,9 +30,8 @@ class AddCoolerFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
-            
-            <<< DecimalRow() { row in
-                var rules = RuleSet<Double>()
+            <<< SignedIntRow() { row in
+                var rules = RuleSet<Int>()
                 rules.add(rule: RuleRequired())
                 
                 row.tag = "lowerTemp"
@@ -41,8 +40,8 @@ class AddCoolerFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
-            <<< DecimalRow() { row in
-                var rules = RuleSet<Double>()
+            <<< SignedIntRow() { row in
+                var rules = RuleSet<Int>()
                 rules.add(rule: RuleRequired())
 
                 row.tag = "upperTemp"
@@ -54,13 +53,14 @@ class AddCoolerFormViewController: FormViewController {
     }
     
     @IBAction func done() {
-        let nameRow = form.rowBy(tag: "name") as! TextRow
-        let lowerTempRow = form.rowBy(tag: "lowerTemp") as! DecimalRow
-        let upperTempRow = form.rowBy(tag: "upperTemp") as! DecimalRow
+        let nameRow = form.rowBy(tag: "name") as! NameRow
+        let lowerTempRow = form.rowBy(tag: "lowerTemp") as! SignedIntRow
+        let upperTempRow = form.rowBy(tag: "upperTemp") as! SignedIntRow
         
         guard nameRow.validationErrors.count == 0 else { return }
         guard lowerTempRow.validationErrors.count == 0 else { return }
         guard upperTempRow.validationErrors.count == 0 else { return }
+        guard lowerTempRow.value! <= upperTempRow.value! else { return }
         
         let realm = try! Realm()
         
