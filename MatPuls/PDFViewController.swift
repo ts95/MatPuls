@@ -39,7 +39,7 @@ class PDFViewController: UIViewController, UIWebViewDelegate, MFMailComposeViewC
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        HUD.flash(.success, delay: 1.0)
+        HUD.flash(.success, delay: 0.5)
     }
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
@@ -62,7 +62,7 @@ class PDFViewController: UIViewController, UIWebViewDelegate, MFMailComposeViewC
     }
     
     func showSendMailErrorAlert() {
-        let alert = UIAlertController(title: "Eposten kunne ikke sendes", message: "Enheten din kunne ikke sende eposten. Sjekk om epostkonfigurasjonen din stemmer.?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Eposten kunne ikke sendes", message: "Enheten din kunne ikke sende eposten. Sjekk om epostkonfigurasjonen er i orden.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
         present(alert, animated: true, completion: nil)

@@ -76,19 +76,21 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         if report.coolers.count > 0 {
             let alert = UIAlertController(title: "Rapport", message: "Generere PDF-fil eller redigere rapporten?", preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "PDF", style: .default) { alertAction in
+            alert.addAction(UIAlertAction(title: "PDF", style: .default) { _ in
                 HUD.show(.progress)
                 
                 self.performSegue(withIdentifier: "pdfSegue", sender: report)
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             })
-            alert.addAction(UIAlertAction(title: "Redigere", style: .default) { alertAction in
+            alert.addAction(UIAlertAction(title: "Redigere", style: .default) { _ in
                 self.performSegue(withIdentifier: "coolerSegue", sender: report)
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             })
-            alert.addAction(UIAlertAction(title: "Avbryt", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Avbryt", style: .cancel) { _ in
+                tableView.deselectRow(at: indexPath, animated: true)
+            })
             
             present(alert, animated: true, completion: nil)
         } else {
