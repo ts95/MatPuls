@@ -44,7 +44,7 @@ func formErrorAlert(_ vc: UIViewController, form: Form) -> Bool {
         
         if validationErrors.count > 0 {
             messages.append(row.validate().reduce("\(row.title!):", { l, r
-                in "\(l)\n\(r.msg)"
+                in "\(l)\n\(r.msg.localized(with: "Validation error message"))"
             }) + "\n")
         }
     }
@@ -64,7 +64,7 @@ func formErrorAlert(_ vc: UIViewController, form: Form) -> Bool {
     let passes = messages.count == 0
     
     if !passes {
-        let alert = UIAlertController(title: "Feil", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "error".localized(with: "Error"), message: "", preferredStyle: .alert)
         alert.setValue(messageText, forKey: "attributedMessage")
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         

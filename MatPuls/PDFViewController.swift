@@ -47,7 +47,7 @@ class PDFViewController: UIViewController, UIWebViewDelegate, MFMailComposeViewC
         mailComposerVC.mailComposeDelegate = self
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yy.MM.dd"
+        formatter.dateFormat = "dd.MM.yy"
         
         let date = formatter.string(from: report.date as Date)
         
@@ -62,7 +62,7 @@ class PDFViewController: UIViewController, UIWebViewDelegate, MFMailComposeViewC
     }
     
     func showSendMailErrorAlert() {
-        let alert = UIAlertController(title: "Eposten kunne ikke sendes", message: "Enheten din kunne ikke sende eposten. Sjekk om epostkonfigurasjonen er i orden.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "mailErrorTitle".localized(with: "The email could not be sent"), message: "mailErrorMessage".localized(with: "Your device couldn't send the email. Check if your email configuration is in order."), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
         present(alert, animated: true, completion: nil)

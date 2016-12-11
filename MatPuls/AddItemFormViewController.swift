@@ -17,7 +17,7 @@ class AddItemFormViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ Section(header: "Ny måling", footer: "")
+        form +++ Section(header: "newMeasurementHeader".localized(with: "New measurement"), footer: "")
             <<< NameRow() { row in
                 var rules = RuleSet<String>()
                 rules.add(rule: RuleRequired())
@@ -25,8 +25,8 @@ class AddItemFormViewController: FormViewController {
                 rules.add(rule: RuleMaxLength(maxLength: 30))
                 
                 row.tag = "unit"
-                row.title = "Enhet"
-                row.placeholder = "Angi enhetsnavn"
+                row.title = "itemUnit".localized(with: "Unit")
+                row.placeholder = "itemUnitPlaceholder".localized(with: "Enter unit name")
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
@@ -37,8 +37,8 @@ class AddItemFormViewController: FormViewController {
                 rules.add(rule: RuleMaxLength(maxLength: 30))
                 
                 row.tag = "placeMeasured"
-                row.title = "Sted målt"
-                row.placeholder = "Angi målingssted"
+                row.title = "itemPlaceMeasured".localized(with: "Place measured")
+                row.placeholder = "itemPlaceMeasuredPlaceholder".localized(with: "Enter measurement place")
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
@@ -47,7 +47,7 @@ class AddItemFormViewController: FormViewController {
                 rules.add(rule: RuleRequired())
                 
                 row.tag = "temp"
-                row.title = "Temperatur"
+                row.title = "itemTemp".localized(with: "Temperature")
                 row.placeholder = "°C"
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange

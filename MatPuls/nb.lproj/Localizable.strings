@@ -1,0 +1,40 @@
+"customer" = "Kunde";
+"newCustomerHeader" = "Opprett en ny kunde";
+"newCustomerFooter" = "For å kunne opprette en rapport må man opprette en kunde først.";
+
+"name" = "Navn";
+"namePlaceholder" = "Angi navn";
+
+"email" = "Epost";
+"emailPlaceholder" = "Angi epost";
+
+"report" = "Rapport";
+"reportActionMessage" = "Generere PDF-fil eller redigere rapporten?";
+"reportGeneratePDF" = "Generere PDF";
+"reportEdit" = "Redigere rapport";
+"newReportHeader" = "Opprett en ny rapport";
+
+"date" = "Dato";
+"cancel" = "Avbryt";
+"error" = "Feil";
+
+"newCoolerHeader" = "Ny kjøler";
+"newCoolerFooter" = "En kjøler kan f.eks. være et kjølerom, en kjøledisk, en frysedisk eller et fryserom.";
+"coolerNamePlaceholder" = "Angi kjølernavn";
+"coolerLowerTemp" = "Min temperatur";
+"coolerUpperTemp" = "Maks temperatur";
+
+"newMeasurementHeader" = "Ny måling";
+"itemUnit" = "Enhet";
+"itemUnitPlaceholder" = "Angi enhetsnavn";
+"itemPlaceMeasured" = "Sted målt";
+"itemPlaceMeasuredPlaceholder" = "Angi målingssted";
+"itemTemp" = "Temperatur";
+
+"mailErrorTitle" = "Eposten kunne ikke sendes";
+"mailErrorMessage" = "Enheten din kunne ikke sende eposten. Sjekk om epostkonfigurasjonen er i orden.";
+
+"Field required!" = "Påkrevd felt.";
+"Field value must have at least 2 characters" = "Min 2 tegn.";
+"Field value must have less than 30 characters" = "Maks 30 tegn.";
+"Field value must have less than 40 characters" = "Maks 40 tegn.";

@@ -1,0 +1,40 @@
+"customer" = "Customer";
+"newCustomerHeader" = "Create a new customer";
+"newCustomerFooter" = "In order to create a report you need to create a customer first.";
+
+"name" = "Name";
+"namePlaceholder" = "Enter name";
+
+"email" = "Email";
+"emailPlaceholder" = "Enter email";
+
+"report" = "Report";
+"reportActionMessage" = "Generate a PDF-file or edit the report?";
+"reportGeneratePDF" = "Generate PDF";
+"reportEdit" = "Edit report";
+"newReportHeader" = "Create a new report";
+
+"cancel" = "Cancel";
+"date" = "Date";
+"error" = "Error";
+
+"newCoolerHeader" = "New cooler";
+"newCoolerFooter" = "A cooler could be a cooling-room, a cooling-desk, a freezing-desk or a freezing-room, etc.";
+"coolerNamePlaceholder" = "Enter cooler name";
+"coolerLowerTemp" = "Min temperature";
+"coolerUpperTemp" = "Max temperature";
+
+"newMeasurementHeader" = "New measurement";
+"itemUnit" = "Unit";
+"itemUnitPlaceholder" = "Enter unit name";
+"itemPlaceMeasured" = "Place measured";
+"itemPlaceMeasuredPlaceholder" = "Enter measurement place";
+"itemTemp" = "Temperature";
+
+"mailErrorTitle" = "The email couldn't be sent";
+"mailErrorMessage" = "Your device couldn't send the email. Check if your email configuration is in order.";
+
+"Field required!" = "Required field.";
+"Field value must have at least 2 characters" = "Min 2 characters.";
+"Field value must have less than 30 characters" = "Max 30 characters.";
+"Field value must have less than 40 characters" = "Max 40 characters.";
