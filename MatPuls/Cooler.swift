@@ -11,16 +11,15 @@ import RealmSwift
 class Cooler: Object {
     
     dynamic var name = ""
-    dynamic var upperTemp = 0
-    dynamic var lowerTemp = 0
+    dynamic var upperTemp = 0.0
+    dynamic var lowerTemp = 0.0
     
     var tempRange: String {
         get {
             if upperTemp == lowerTemp {
-                return String(format: "%d°C", arguments: [lowerTemp])
+                return String(format: "%.0f°C", arguments: [lowerTemp])
             }
-            
-            return String(format: "%d — %d°C", arguments: [lowerTemp, upperTemp])
+            return String(format: "%.0f — %.0f°C", arguments: [lowerTemp, upperTemp])
         }
     }
     

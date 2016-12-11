@@ -30,8 +30,8 @@ class AddCoolerFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
-            <<< SignedIntRow() { row in
-                var rules = RuleSet<Int>()
+            <<< TempRow() { row in
+                var rules = RuleSet<Double>()
                 rules.add(rule: RuleRequired())
                 
                 row.tag = "lowerTemp"
@@ -40,8 +40,8 @@ class AddCoolerFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
-            <<< SignedIntRow() { row in
-                var rules = RuleSet<Int>()
+            <<< TempRow() { row in
+                var rules = RuleSet<Double>()
                 rules.add(rule: RuleRequired())
 
                 row.tag = "upperTemp"
@@ -54,8 +54,8 @@ class AddCoolerFormViewController: FormViewController {
     
     @IBAction func done() {
         let nameRow = form.rowBy(tag: "name") as! NameRow
-        let lowerTempRow = form.rowBy(tag: "lowerTemp") as! SignedIntRow
-        let upperTempRow = form.rowBy(tag: "upperTemp") as! SignedIntRow
+        let lowerTempRow = form.rowBy(tag: "lowerTemp") as! TempRow
+        let upperTempRow = form.rowBy(tag: "upperTemp") as! TempRow
 
         let passes = formErrorAlert(self, form: form)
         

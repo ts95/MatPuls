@@ -1,5 +1,5 @@
 //
-//  SignedIntRow.swift
+//  TempRow.swift
 //  MatPuls
 //
 //  Created by Toni Sučić on 11.12.2016.
@@ -9,7 +9,7 @@
 import UIKit
 import Eureka
 
-open class SignedIntCell : _FieldCell<Int>, CellType {
+open class TempCell : _FieldCell<Double>, CellType {
     
     required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -28,21 +28,14 @@ open class SignedIntCell : _FieldCell<Int>, CellType {
     }
 }
 
-open class _SignedIntRow: FieldRow<SignedIntCell> {
+open class _TempRow: FieldRow<TempCell> {
     
     public required init(tag: String?) {
         super.init(tag: tag)
-        
-        let numberFormatter = NumberFormatter()
-        numberFormatter.locale = Locale.current
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.minimumFractionDigits = 0
-        
-        formatter = numberFormatter
     }
 }
 
-public final class SignedIntRow: _SignedIntRow, RowType {
+public final class TempRow: _TempRow, RowType {
     
     required public init(tag: String?) {
         super.init(tag: tag)

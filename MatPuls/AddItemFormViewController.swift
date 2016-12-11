@@ -42,8 +42,8 @@ class AddItemFormViewController: FormViewController {
                 row.add(ruleSet: rules)
                 row.validationOptions = .validatesOnChange
             }
-            <<< SignedIntRow() { row in
-                var rules = RuleSet<Int>()
+            <<< TempRow() { row in
+                var rules = RuleSet<Double>()
                 rules.add(rule: RuleRequired())
                 
                 row.tag = "temp"
@@ -57,7 +57,7 @@ class AddItemFormViewController: FormViewController {
     @IBAction func done() {
         let unitRow = form.rowBy(tag: "unit") as! NameRow
         let placeMeasuredRow = form.rowBy(tag: "placeMeasured") as! NameRow
-        let tempRow = form.rowBy(tag: "temp") as! SignedIntRow
+        let tempRow = form.rowBy(tag: "temp") as! TempRow
         
         let passes = formErrorAlert(self, form: form)
         
