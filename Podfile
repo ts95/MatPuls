@@ -9,6 +9,7 @@ target 'MatPuls' do
   pod 'Eureka', '~> 2.0.0-beta.1'
   pod 'GRMustache.swift'
   pod 'iOS-htmltopdf'
+  pod 'PKHUD', '~> 4.0'
 
 end
 

@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import PKHUD
 
 class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -76,6 +77,8 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if report.coolers.count > 0 {
             let alert = UIAlertController(title: "Rapport", message: "Generere PDF-fil eller redigere rapporten?", preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "PDF", style: .default) { alertAction in
+                HUD.show(.progress)
+                
                 self.performSegue(withIdentifier: "pdfSegue", sender: report)
                 
                 tableView.deselectRow(at: indexPath, animated: true)

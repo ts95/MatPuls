@@ -8,8 +8,9 @@
 
 import UIKit
 import MessageUI
+import PKHUD
 
-class PDFViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class PDFViewController: UIViewController, UIWebViewDelegate, MFMailComposeViewControllerDelegate {
     
     var customer: Customer!
     var report: Report!
@@ -20,6 +21,8 @@ class PDFViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        webView.delegate = self
         
         ReportGenerator.generatePDF(customer: customer, report: report, completion: { htmlToPdf in
             self.webView.load(
@@ -33,6 +36,10 @@ class PDFViewController: UIViewController, MFMailComposeViewControllerDelegate {
         }, failure: { htmlToPdf in
             print("An error occured while generating the PDF.")
         })
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        HUD.flash(.success, delay: 1.0)
     }
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {

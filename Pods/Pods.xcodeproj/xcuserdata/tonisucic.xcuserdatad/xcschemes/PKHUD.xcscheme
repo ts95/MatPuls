@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EE774F234E810C0DD8263855D7A1A166'
-               BlueprintName = 'Eureka'
+               BlueprintIdentifier = 'D7A75F149082140741FC1E0B5B2863C8'
+               BlueprintName = 'PKHUD'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Eureka.framework'>
+               BuildableName = 'PKHUD.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
